@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load model
-model = pickle.load(open("insurance_model.pkl", "rb"))
+model = pickle.load(open("insurance_model_new.pkl", "rb"))
 
 # Page config
 st.set_page_config(
@@ -108,3 +108,4 @@ with col2:
 
 st.markdown("---")
 st.caption("⚠️ Prediction is based on a trained Machine Learning model and may vary from actual insurance charges.")
+
