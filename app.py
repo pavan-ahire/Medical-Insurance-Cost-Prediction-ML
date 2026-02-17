@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load model
-model = pickle.load(open("insurance_model_new.pkl", "rb"))
+model = pickle.load(open("insurance_model.pkl", "rb"))
 
 # Page config
 st.set_page_config(
@@ -46,8 +46,29 @@ st.markdown("""
     padding:20px;
     border-radius:12px;
 }
+/* Button Styling - Blue Gradient */
+div.stButton > button {
+    background: linear-gradient(90deg, #2E86C1, #5DADE2);  /* Blue gradient */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 18px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover - Orange Gradient */
+div.stButton > button:hover {
+    background: linear-gradient(90deg, #E67E22, #F5B041);  /* Orange gradient */
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
 </style>
 """, unsafe_allow_html=True)
+
 
 # Header
 st.markdown('<div class="main-header">🏥 Medical Insurance Cost Prediction</div>', unsafe_allow_html=True)
@@ -95,7 +116,7 @@ with col1:
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col2:
-    st.markdown("### 🤖 Prediction")
+    st.markdown("### Prediction")
 
     if st.button("Predict Insurance Cost 💰"):
         input_data = np.array([[age, sex_val, bmi, children, smoker_val, region_val]])
@@ -107,5 +128,4 @@ with col2:
         )
 
 st.markdown("---")
-st.caption("⚠️ Prediction is based on a trained Machine Learning model and may vary from actual insurance charges.")
-
+st.info("⚠️ Prediction is based on a trained Machine Learning model and may vary from actual insurance charges.")
