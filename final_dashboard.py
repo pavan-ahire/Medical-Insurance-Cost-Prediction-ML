@@ -523,7 +523,7 @@ elif menu == "Model Prediction":
         st.markdown(f"""
         <div class="result-card">
             <div class="result-title">Estimated Medical Insurance Cost</div>
-            ₹ {prediction:,.2f}
+            $ {prediction:,.2f}
         </div>
         """, unsafe_allow_html=True)
 
@@ -535,7 +535,7 @@ elif menu == "Model Prediction":
             "Children":[children],
             "Smoker":[smoker],
             "Region":[region],
-            "Predicted Medical Cost (₹)":[f"{prediction:,.2f}"]
+            "Predicted Medical Cost ($)":[f"{prediction:,.2f}"]
         })
 
         st.markdown("### 📋 Prediction Summary")
@@ -544,3 +544,4 @@ elif menu == "Model Prediction":
     st.markdown("---")
 
     st.info("Prediction is based on Historical data.")
+
