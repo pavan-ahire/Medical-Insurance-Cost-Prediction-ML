@@ -19,8 +19,10 @@ The project includes:
 
 ## 🚀 Live Deployment
 The project is deployed using **Streamlit Cloud**, providing both prediction and analytics capabilities.
-
 ### 🔗 Live Links
+- **Medical Insurance DASHBOARD and PREDICTION app**  
+   👉 https://medical-insurance-dashboard-and-prediction.streamlit.app/
+
 - **Medical Insurance Prediction App**  
   👉 https://medical-insurance-cost-prediction-ml.streamlit.app/
 
