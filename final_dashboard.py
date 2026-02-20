@@ -131,7 +131,15 @@ if menu=="Dashboard":
         st.write(f"Shape: {df.shape}")
         st.write(f"Rows: {df.shape[0]}")
         st.write(f"Columns: {df.shape[1]}")
-
+        
+        st.write("### BMI ( Body Mass Index)")
+        st.info("bmi is calculated by weight (KG) / Height (m)")
+        bmi_dt={
+            "BMI Range":["Below 18.5","18.5 - 24.9",'25 - 29.9','30+'],
+            "Category":["Underweight","Normal","Overweight","Obese"]
+        }
+        st.table(bmi_dt)
+        
         st.subheader("Statistical Summary")
         st.dataframe(df.describe())
 
@@ -534,4 +542,5 @@ elif menu == "Model Prediction":
         st.table(result_df)
 
     st.markdown("---")
+
     st.info("Prediction is based on Historical data.")
